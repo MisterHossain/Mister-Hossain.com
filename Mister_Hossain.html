@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md. Mister Hossain</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#ffffff;background-size:300% 300%;animation:bg 10s infinite;padding:10px}
+
+.container{
+max-width:700px;
+margin:auto;
+background:#fff;
+position:relative;
+border-radius:20px;
+padding:8px;
+}
+
+
+.container::before{
+content:"";
+position:absolute;
+inset:0;
+border-radius:20px;
+padding:4px;
+pointer-events:none;
+
+background:
+repeating-linear-gradient(90deg,#0099ff 0 6px,transparent 6px 12px) top/200% 4px repeat-x,
+repeating-linear-gradient(180deg,#8e44ad 0 6px,transparent 6px 12px) right/4px 200% repeat-y,
+repeating-linear-gradient(270deg,#00cc66 0 6px,transparent 6px 12px) bottom/200% 4px repeat-x,
+repeating-linear-gradient(0deg,#ff0000 0 6px,transparent 6px 12px) left/4px 200% repeat-y;
+
+animation:marchingBorder 1s linear infinite;
+}
+
+@keyframes marchingBorder{
+0%{
+background-position:
+0 0,
+100% 0,
+0 100%,
+0 0;
+}
+
+100%{
+background-position:
+24px 0,
+100% 24px,
+-24px 100%,
+0 -24px;
+}
+}
+
+
+.cover{height:260px;background:url('https://raw.githubusercontent.com/MisterHossain/Logu/refs/heads/main/Cover%20Banner%20Image.jpg') center/contain no-repeat #000;position:relative}
+
+.profile{
+width:190px;
+height:190px;
+border-radius:50%;
+position:absolute;
+left:50%;
+bottom:-95px;
+transform:translateX(-50%);
+overflow:hidden;
+padding:8px;
+
+background:
+repeating-conic-gradient(
+#ff0000 0deg 2deg,
+transparent 2deg 4deg,
+#00ff00 4deg 6deg,
+transparent 6deg 8deg,
+#0099ff 8deg 10deg,
+transparent 10deg 12deg,
+#ffff00 12deg 14deg,
+transparent 14deg 16deg
+);
+
+animation:ringMove 6s linear infinite;
+}
+
+.profile img{
+width:100%;
+height:100%;
+border-radius:50%;
+border:5px solid #fff;
+display:block;
+}
+
+@keyframes ringMove{
+from{
+transform:translateX(-50%) rotate(0deg);
+}
+to{
+transform:translateX(-50%) rotate(360deg);
+}
+}
+
+.profile img{width:100%;height:100%;border-radius:50%;border:5px solid #fff}
+
+
+
+.content{text-align:center;padding:105px 15px 20px}
+.follow,.contact{display:block;text-decoration:none;margin:10px auto;padding:12px;border-radius:30px;max-width:500px}
+.follow{color:#fff;background:linear-gradient(90deg,#1877f2,#00c6ff,#1877f2);background-size:300% 100%;animation:move 3s infinite}
+.contact{color:#000;background:linear-gradient(90deg,#ffe600,#fff27a,#ffe600);background-size:300% 100%;animation:move 3s infinite}
+@keyframes move{to{background-position:100% 0}}
+.social{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:20px 0}
+.social a{width:50px;height:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#fff;text-decoration:none;font-size:22px;animation:bounce 2s infinite}
+@keyframes bounce{50%{transform:translateY(-5px)}}
+
+.stats{
+display:flex;
+justify-content:space-around;
+padding:15px;
+font-weight:bold;
+border:3px solid #000;
+margin:15px auto;
+max-width:550px;
+background:#fff;
+}
+
+.stats div{
+flex:1;
+}
+
+.stats div:not(:last-child){
+border-right:2px solid #000;
+}
+
+.tabs button{padding:8px 12px;margin:3px}
+
+.box{
+display:inline-block;
+margin:15px auto;
+padding:10px 20px;
+background:#ffe4ef;
+border-radius:12px;
+font-size:20px;
+min-height:auto;
+max-width:90%;
+}
+
+
+.bio-text{
+display:inline-block;
+text-align:left;
+font-size:13px;
+font-weight:600;
+line-height:1.8;
+margin:15px 0;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="cover">
+<div class="profile"><img src="https://raw.githubusercontent.com/MisterHossain/Logu/refs/heads/main/Profile%20Image%20logu.jpeg"></div>
+</div>
+
+<div class="content">
+<h2>Md. Mister Hossain (Munna)</h2>
+
+<div class="bio-text">
+👨‍💼 Business Consultant Accounts Department gjhhvghbvcchnb<br>
+💠 Science Technology Company<br>
+🏠 Dhaka Bangladesh
+</div>
+
+
+<a class="follow" href="https://www.facebook.com/share/1ES5pJbxFq/" target="_blank">Fb +Follow</a>
+<a class="contact" href="#social">Contact</a>
+
+<div class="stats">
+<div>Post<br><span id="p">0</span></div>
+<div>Followers<br><span id="f">0</span></div>
+<div>Following<br><span id="fo">0</span></div>
+</div>
+
+<div class="social" id="social">
+<a style="background:#1877f2" href="https://www.facebook.com/share/1ES5pJbxFq/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a style="background:#25d366" href="https://wa.me/+8801845495829" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a style="background:#229ed9" href="https://t.me/mister_prem27" target="_blank"><i class="fab fa-telegram"></i></a>
+<a style="background:#444" href="mailto:misterislam127@gmail.com"><i class="fas fa-envelope"></i></a>
+<a style="background:#8e44ad" href="tel:+8801782150327"><i class="fas fa-phone"></i></a>
+<a style="background:#ff9800" href="https://misterhossainlifestyle.fashion.blog/" target="_blank"><i class="fas fa-globe"></i></a>
+</div>
+
+
+
+<div class="tabs">
+<button onclick="homeBox()">Home</button>
+
+<button onclick="show('I am a good boy')">Info</button>
+
+<button onclick="show('Computer science kaj kori')">Work</button>
+
+<button onclick="show('Computer Skill, Microsoft Office Skill')">Skill</button>
+
+<button onclick="show('Degree Pass')">Education</button>
+
+<button onclick="show('SSC:2019 | HSC:2021 | Degree:2026 | Md. Mister Hossain')">About</button>
+</div>
+
+<div class="box" id="box">
+<marquee scrollamount="4">
+I am a good boy • Welcome To My Website
+</marquee>
+</div>
+</div>
+
+<script>
+
+function c(id,t,s){
+let n=0;
+let x=setInterval(()=>{
+n++;
+document.getElementById(id).innerText=n;
+if(n>=t) clearInterval(x);
+},s);
+}
+
+c('p',149,20);
+c('f',25278,1);
+c('fo',2,500);
+
+function show(t){
+document.getElementById('box').innerHTML=t;
+}
+
+function homeBox(){
+document.getElementById('box').innerHTML=`
+<marquee scrollamount="4">
+🏠 Welcome To My Website • Md. Mister Hossain • Thank You For Visiting My Profile
+</marquee>
+`;
+}
+
+</script>
+
+
+<div>
+
+<marquee scrollamount="4">
+🏠 Welcome To My Website
+</marquee>
+
+<h3 style="margin-left:20px;">Md. Mister Hossain</h3>
+
+<p style="margin-left:10px;">Business Consultant</p>
+
+<small style="margin-left:30px;">Dhaka, Bangladesh</small>
+
+</div>
+
+</body>
+</html>
